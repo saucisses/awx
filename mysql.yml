@@ -2,5 +2,5 @@
   tasks:
   - name: install mysql
     yum:
-      name: mysql-server
+      name: mysql-community-server
       state: latest
