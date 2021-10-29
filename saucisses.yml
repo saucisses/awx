@@ -1,6 +1,10 @@
 - name: upgrade all packages
   hosts: all
   tasks:
-    yum: 
-      name: '*'
-      state: latest
+  - name: yum_command 
+    yum:
+      list=installed
+    register: yum_packages
+
+  - debug:
+      var: yum_packages
