@@ -1,7 +1,6 @@
 - hosts: all
   tasks:
   - name: install mysql
-    apt:
+    yum:
       name: mysql-server
-      update_cache: yes
       state: latest
