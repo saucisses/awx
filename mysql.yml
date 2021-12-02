@@ -4,6 +4,7 @@
     package:
       name: "{{ package }}"
       state: latest
+      enabled: true
   - name: install firewalld
     package:
       name: firewalld
@@ -13,7 +14,6 @@
     service:
       name: "{{ package }}"
       state: started
-      enabled: true
   - name: Open port 80 for http access
     firewalld:
       service: http
