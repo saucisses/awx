@@ -9,7 +9,7 @@
       name: firewalld
       state: latest
       enabled: true
-- name: ensure httpd is running
+  - name: ensure httpd is running
     service:
       name: "{{ package }}"
       state: started
