@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
   - name: install apache
-    apt:
-      name: apache
+    package:
+      name: "{{ package }}"
       state: latest
