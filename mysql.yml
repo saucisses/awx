@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-  - name: install apache2
+  - name: install apache
     yum:
-      name: apache2
+      name: apache
       state: latest
