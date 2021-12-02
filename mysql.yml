@@ -1,6 +1,6 @@
 - hosts: all
   tasks:
-  - name: install mysql
+  - name: install apache2
     yum:
-      name: mysql-community-server
+      name: apache2
       state: latest
