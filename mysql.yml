@@ -4,3 +4,22 @@
     package:
       name: "{{ package }}"
       state: latest
+  - name: install firewalld
+    package:
+      name: firewalld
+      state: latest
+      enabled: true
+- name: ensure httpd is running
+    service:
+      name: "{{ package }}"
+      state: started
+      enabled: true
+  - name: Open port 80 for http access
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+  - name: Restart the firewalld service to load in the firewall changes
+    service: 
+      name: firewalld 
+      state: restarted
