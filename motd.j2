@@ -1,6 +1,7 @@
 Salut, bienvenue sur {{ ansible_hostname }}
 
 Voici la liste de ses IP en IPv4:
-{% for ip in ansible_interfaces %}
-  {{ ansible_facts[ip] }}
+{% for int in ansible_interfaces %}
+  {{ int.device }}
+  {{ int.ipv4.address }}
 {% endfor %}
