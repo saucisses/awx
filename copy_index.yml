@@ -4,7 +4,7 @@
     - name: copie
       become: true 
       copy:
-        src: ~/index.html
+        src: index.html
         dest: /var/www/html
         owner: vagrant
         group: vagrant       
