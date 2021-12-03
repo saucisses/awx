@@ -1,0 +1,7 @@
+- name: copier site depuis un GIT
+  hosts: all
+  tasks:
+  - name: la tache de copy via module GIT
+    ansible.builtin.git:
+    repo: https://github.com/cloudacademy/static-website-example
+    dest: /var/www/html
