@@ -1,6 +1,7 @@
 ---
 - name: reboot
   hosts: all
-  - tasks:
+  tasks:
+    name: reboot serveur
     reboot:
       test_command: uptime
