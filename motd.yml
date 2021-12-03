@@ -1,0 +1,12 @@
+---
+- name: template motd en jinja
+  hosts: all
+  tasks:
+  - name: copie du template
+    ansible.builtin.template:
+      src: motd.j2
+      dest: /etc/motd
+      owner: vagrant
+      group: vagrant
+      mode: '0644'
+  
