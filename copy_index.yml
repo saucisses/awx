@@ -1,0 +1,11 @@
+- name: Copier index.html
+  hosts: all
+  tasks:
+    - name: copie
+      become: true 
+      copy:
+        src: ~/index.html
+        dest: /var/www/html
+        owner: vagrant
+        group: vagrant       
+        mode: 0644
