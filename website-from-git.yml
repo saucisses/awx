@@ -4,7 +4,8 @@
   tasks:
   - name: supprimer le dossier avant
     file:
-      
+      path: /var/www/html
+      state: absent      
   - name: la tache de copy via module GIT
     ansible.builtin.git:
       repo: https://github.com/cloudacademy/static-website-example
